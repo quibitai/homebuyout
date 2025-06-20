@@ -406,6 +406,7 @@
         });
 
         function setupReportLink() {
+            const mainPageUrl = window.location.href.split('#')[0]; // Get base URL
             const reportContent = `
             <!DOCTYPE html>
             <html lang="en" style="scroll-behavior: smooth;">
@@ -427,7 +428,7 @@
             </head>
             <body>
                 <div class="sticky-header">
-                    <a href="/">« Back to Interactive Calculator</a>
+                    <a href="${mainPageUrl}">« Back to Interactive Calculator</a>
                 </div>
                 <div class="report-container">
                     <h1 style="color: #003366; border-bottom: 2px solid #0056b3; padding-bottom: 0.5rem;">A Comprehensive Guide to Structuring Your Co-Owner Buyout</h1>
