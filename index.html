@@ -72,7 +72,7 @@
         .chevron-icon.rotated {
             transform: rotate(180deg);
         }
-        .info-modal-backdrop {
+        .modal-backdrop {
             background-color: rgba(0,0,0,0.5);
         }
         .report-link {
@@ -80,6 +80,7 @@
             color: #0077B6;
             text-decoration: underline;
             margin-left: 8px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -114,7 +115,7 @@
         </section>
 
         <section id="equity" class="mb-12 bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">Section 2: Calculating Adam's Buyout Amount <a class="report-link" href="#" data-report-anchor="#s1-2" target="_blank">(learn more)</a></h2>
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">Section 2: Calculating Adam's Buyout Amount <a class="report-link" data-report-anchor="#s1-2">(learn more)</a></h2>
             <p class="text-center md:text-left text-[#023E8A] max-w-3xl mx-auto mb-8">To determine a buyout amount, we calculate the home's gross equity. This involves subtracting the remaining mortgage from the Fair Market Value (FMV). Deciding whether to also deduct hypothetical selling costs is a point of negotiation.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="chart-container h-80 md:h-96">
@@ -133,7 +134,7 @@
 
         <section id="pathways" class="mb-12">
             <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">Section 3: The Two Pathways to a Buyout</h2>
-             <p class="text-center md:text-left text-[#023E8A] max-w-3xl mx-auto mb-8">Jane needs to take over the mortgage to release Adam from the debt. The central difference between the two pathways—Assumption<a class="report-link" href="#" data-report-anchor="#s2" target="_blank">(details)</a> and Refinance<a class="report-link" href="#" data-report-anchor="#s3" target="_blank">(details)</a>—is the interest rate, which has a massive impact on long-term cost.</p>
+             <p class="text-center md:text-left text-[#023E8A] max-w-3xl mx-auto mb-8">Jane needs to take over the mortgage to release Adam from the debt. The central difference between the two pathways—Assumption<a class="report-link" data-report-anchor="#s2">(details)</a> and Refinance<a class="report-link" data-report-anchor="#s3">(details)</a>—is the interest rate, which has a massive impact on long-term cost.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <div class="chart-container h-80">
@@ -150,7 +151,7 @@
         </section>
 
         <section id="costs" class="mb-12 bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">Section 4: Estimated Closing Costs (FHA Assumption) <a class="report-link" href="#" data-report-anchor="#s2-4" target="_blank">(learn more)</a></h2>
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">Section 4: Estimated Closing Costs (FHA Assumption) <a class="report-link" data-report-anchor="#s2-4">(learn more)</a></h2>
             <p class="text-center md:text-left text-[#023E8A] max-w-3xl mx-auto mb-8">While an assumption is cheaper than a full refinance, Jane should budget for the following estimated costs. These are separate from Adam's equity payout.</p>
             <div class="max-w-md mx-auto">
                 <ul class="space-y-3 text-lg">
@@ -176,7 +177,7 @@
                     </div>
                     <div id="step-1-details" class="details-content p-4 text-left hidden">
                         <ul class="list-disc list-inside space-y-2">
-                            <li>Draft a written Buyout Agreement to formalize the terms. <a class="report-link" href="#" data-report-anchor="#s5-1" target="_blank">(details)</a></li>
+                            <li>Draft a written Buyout Agreement to formalize the terms. <a class="report-link" data-report-anchor="#s5-1">(details)</a></li>
                             <li>Jointly commission a professional appraisal to set the official Fair Market Value (FMV).</li>
                             <li><strong>Est. Appraisal Cost:</strong> $400 - $700. As agreed, this cost will be split ($200 - $350 each).</li>
                         </ul>
@@ -191,7 +192,7 @@
                     </div>
                     <div id="step-2-details" class="details-content p-4 text-left hidden">
                         <ul class="list-disc list-inside space-y-2">
-                            <li>Jane must contact PennyMac's assumption unit and undergo a full creditworthiness review. <a class="report-link" href="#" data-report-anchor="#s2-2" target="_blank">(details)</a></li>
+                            <li>Jane must contact PennyMac's assumption unit and undergo a full creditworthiness review. <a class="report-link" data-report-anchor="#s2-2">(details)</a></li>
                             <li><strong>Key Requirements:</strong> Stable income (Debt-to-Income ratio < 43%), good credit (lender likely requires > 620 score), and full financial documentation (pay stubs, tax returns, etc.).</li>
                             <li><strong>Est. Timeline:</strong> Be prepared for 60-90+ days.</li>
                         </ul>
@@ -207,8 +208,8 @@
                     <div id="step-3-details" class="details-content p-4 text-left hidden">
                         <ul class="list-disc list-inside space-y-2">
                             <li>Engage a Louisiana real estate attorney to draft the key documents.</li>
-                            <li><strong>Promissory Note:</strong> An unsecured legal IOU for the equity payout. Must include an IRS-compliant interest rate. <button id="info-link" class="text-blue-500 underline">(Why is interest required?)</button> <a class="report-link" href="#" data-report-anchor="#s4-1" target="_blank">(details)</a></li>
-                            <li><strong>Quitclaim Deed:</strong> Transfers Adam's ownership to Jane. <a class="report-link" href="#" data-report-anchor="#s5-2" target="_blank">(details)</a></li>
+                            <li><strong>Promissory Note:</strong> An unsecured legal IOU for the equity payout. Must include an IRS-compliant interest rate. <button id="info-link" class="text-blue-500 underline">(Why is interest required?)</button> <a class="report-link" data-report-anchor="#s4-1">(details)</a></li>
+                            <li><strong>Quitclaim Deed:</strong> Transfers Adam's ownership to Jane. <a class="report-link" data-report-anchor="#s5-2">(details)</a></li>
                         </ul>
                     </div>
                 </div>
@@ -221,7 +222,7 @@
                     </div>
                     <div id="step-4-details" class="details-content p-4 text-left hidden bg-white">
                         <ul class="list-disc list-inside space-y-2">
-                             <li>This is the most important step for Adam's protection. <a class="report-link" href="#" data-report-anchor="#s2-3" target="_blank">(learn more)</a></li>
+                             <li>This is the most important step for Adam's protection. <a class="report-link" data-report-anchor="#s2-3">(learn more)</a></li>
                              <li><strong>Required Document:</strong> Adam must receive the fully executed <strong>Form HUD-92210.1 (Approval of Purchaser and Release of Seller)</strong> from PennyMac.</li>
                              <li><strong>Warning:</strong> Do not proceed to the final step or transfer the title until this official release is in hand.</li>
                         </ul>
@@ -237,14 +238,14 @@
                     <div id="step-5-details" class="details-content p-4 text-left hidden">
                         <ul class="list-disc list-inside space-y-2">
                             <li>Sign all documents as an "authentic act" (in front of a notary and two witnesses).</li>
-                            <li>File the original, notarized Quitclaim Deed at the <strong>Orleans Parish Clerk of Court, Land Records Division</strong>. <a class="report-link" href="#" data-report-anchor="#s5-3" target="_blank">(details)</a></li>
+                            <li>File the original, notarized Quitclaim Deed at the <strong>Orleans Parish Clerk of Court, Land Records Division</strong>. <a class="report-link" data-report-anchor="#s5-3">(details)</a></li>
                             <li><strong>Cost:</strong> Pay parish recording fees at the time of filing.</li>
                         </ul>
                     </div>
                 </div>
             </div>
              <div class="text-center mt-12">
-                <a id="fullReportLink" href="#" target="_blank" class="inline-block bg-[#0077B6] text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-[#0096C7] transition-colors">View Full Research Report</a>
+                <button id="fullReportLink" class="inline-block bg-[#0077B6] text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-[#0096C7] transition-colors">View Full Research Report</button>
             </div>
         </section>
 
@@ -252,7 +253,7 @@
     
     <!-- Info Modal -->
     <div id="info-modal" class="fixed inset-0 z-50 items-center justify-center hidden">
-        <div class="info-modal-backdrop fixed inset-0"></div>
+        <div class="modal-backdrop fixed inset-0"></div>
         <div class="bg-white rounded-lg shadow-xl p-6 m-4 max-w-lg w-full relative">
             <h3 class="text-2xl font-bold text-[#0077B6] mb-4">The IRS "Below-Market Interest" Rule</h3>
             <p class="text-[#03045E] mb-4">Even in amicable buyouts, a 0% interest loan can cause unintended tax problems. The IRS requires private loans to have an interest rate at least equal to the <strong class="text-black">Applicable Federal Rate (AFR)</strong>.</p>
@@ -261,9 +262,25 @@
                 <li>The forgiven interest could also be considered a taxable gift from Adam to Jane.</li>
             </ul>
             <p class="text-[#023E8A] font-semibold">Setting the interest rate to the AFR (e.g., 4.77%) is not about profiting from the loan; it's a necessary step for tax compliance that protects both parties from future IRS complications.</p>
-            <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
+            <button id="close-info-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
+        </div>
+    </div>
+    
+    <!-- Report Modal -->
+    <div id="report-modal" class="fixed inset-0 z-50 items-center justify-center hidden">
+        <div class="modal-backdrop fixed inset-0"></div>
+        <div class="bg-white rounded-lg shadow-xl m-2 md:m-8 w-full h-full md:h-auto md:max-h-[90vh] flex flex-col relative">
+            <div class="p-4 border-b flex justify-between items-center">
+                 <h3 class="text-xl md:text-2xl font-bold text-[#0077B6]">Full Research Report</h3>
+                 <button id="close-report-modal" class="text-gray-500 hover:text-gray-800">
+                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                 </button>
+            </div>
+            <div id="report-content" class="p-6 overflow-y-auto" style="scroll-behavior: smooth;">
+                <!-- Report content will be injected here -->
+            </div>
         </div>
     </div>
 
@@ -283,7 +300,11 @@
         
         const infoModal = document.getElementById('info-modal');
         const infoLink = document.getElementById('info-link');
-        const closeModal = document.getElementById('close-modal');
+        const closeInfoModalBtn = document.getElementById('close-info-modal');
+
+        const reportModal = document.getElementById('report-modal');
+        const reportContentEl = document.getElementById('report-content');
+        const closeReportModalBtn = document.getElementById('close-report-modal');
 
         const BASELINE_PRINCIPAL = 225669.47;
         const BASELINE_DATE = new Date('2025-06-01T12:00:00Z');
@@ -292,7 +313,6 @@
         
         let equityDonutChart;
         let currentMortgageBalance = BASELINE_PRINCIPAL;
-        let reportUrl = '';
 
         function formatCurrency(value) {
             return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(value);
@@ -380,64 +400,43 @@
             });
         }
 
-        function setupModal() {
+        function setupInfoModal() {
             infoLink.addEventListener('click', () => {
                 infoModal.classList.remove('hidden');
                 infoModal.classList.add('flex');
             });
-            closeModal.addEventListener('click', () => {
+            closeInfoModalBtn.addEventListener('click', () => {
                 infoModal.classList.add('hidden');
                 infoModal.classList.remove('flex');
             });
-             infoModal.querySelector('.info-modal-backdrop').addEventListener('click', () => {
+             infoModal.querySelector('.modal-backdrop').addEventListener('click', () => {
                 infoModal.classList.add('hidden');
                 infoModal.classList.remove('flex');
             });
         }
 
-        homeValueSlider.addEventListener('input', calculateAndDisplay);
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeCharts();
-            calculateAndDisplay();
-            setupAccordion();
-            setupModal();
-            setupReportLink();
-        });
-
-        function setupReportLink() {
-            const mainPageUrl = window.location.href.split('#')[0]; // Get base URL
-            const reportContent = `
-            <!DOCTYPE html>
-            <html lang="en" style="scroll-behavior: smooth;">
-            <head>
-                <meta charset="UTF-8">
-                <title>Full Research Report</title>
+        function setupReportModal() {
+            const reportStyles = `
                 <style>
-                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-                    .report-container { max-width: 800px; margin: 2rem auto; padding: 2rem; border: 1px solid #ddd; border-radius: 8px; background-color: #fff; scroll-padding-top: 80px; }
-                    h1, h2, h3 { color: #003366; }
-                    h1 { border-bottom: 2px solid #0056b3; padding-bottom: 0.5rem; }
-                    h2 { padding-top: 60px; } /* padding to offset for sticky header */
-                    .sticky-header { position: sticky; top: 0; background-color: #0077B6; color: white; padding: 1rem; text-align: center; z-index: 1000; }
-                    .sticky-header a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
-                    table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; }
-                    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                    th { background-color: #f2f2f2; }
+                    .report-body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                    .report-body h1, .report-body h2, .report-body h3 { color: #003366; }
+                    .report-body h1 { border-bottom: 2px solid #0056b3; padding-bottom: 0.5rem; font-size: 1.75rem; }
+                    .report-body h2 { padding-top: 20px; font-size: 1.5rem;} 
+                    .report-body h3 { font-size: 1.25rem;} 
+                    .report-body table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+                    .report-body th, .report-body td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                    .report-body th { background-color: #f2f2f2; }
+                    .report-body ul, .report-body ol { padding-left: 30px; }
                 </style>
-            </head>
-            <body>
-                <div class="sticky-header">
-                    <a href="${mainPageUrl}">« Back to Interactive Calculator</a>
-                </div>
-                <div class="report-container">
+            `;
+            
+            const reportHtmlContent = `
+                <div class="report-body">
                     <h1 style="color: #003366; border-bottom: 2px solid #0056b3; padding-bottom: 0.5rem;">A Comprehensive Guide to Structuring Your Co-Owner Buyout</h1>
-                    
                     <h2 id="s0" style="color: #0056b3; padding-top: 20px;">Executive Summary: A Strategic Roadmap for Your Property Buyout</h2>
                     <p>This report provides a detailed analysis and strategic guide for structuring a home buyout between co-owners Adam and Jane for the property located at 1330 1332 Mandeville St, New Orleans, LA. The analysis addresses the core complexities of the situation: Adam is the sole party on the mortgage, while both he and Jane are on the property title. The primary objective is to facilitate a buyout where Jane acquires full ownership and mortgage responsibility, while accommodating her inability to pay Adam's equity share in a lump sum.</p>
                     <p>Two primary pathways are evaluated to achieve this transfer: an <strong>FHA Loan Assumption</strong> and a <strong>Mortgage Refinance</strong>. The central challenge—structuring a deferred equity payout for Adam—is addressed through a recommended solution: an <strong>unsecured Promissory Note</strong>.</p>
                     <p>The analysis concludes that the most advantageous path is the FHA Loan Assumption. This approach allows Jane to take over the existing FHA mortgage, preserving its original terms, which likely include a favorable interest rate from its May 2021 origination. This preservation of terms offers significant long-term financial benefits compared to refinancing at current, higher market rates. The deferred equity payment can be legally managed through the execution of a formal, unsecured promissory note from Jane to Adam. This report provides a step-by-step framework for executing this transaction in a manner that is fair, legally sound, and clarifies the risks for both parties.</p>
-
                     <h2 id="s1" style="color: #0056b3;">Section 1: Foundational Analysis of Your Situation</h2>
                     <h3 id="s1-1" style="color: #004080;">1.1 Deconstructing the Ownership & Debt Structure</h3>
                     <p>A clear understanding of the legal distinction between property title and mortgage debt is the foundation for a successful buyout. As co-owners listed on the property's title (or deed), both Adam and Jane hold legal ownership rights to the home. However, with only Adam's name on the mortgage, he alone bears the legal obligation to the lender, PennyMac, for the full repayment of the $225,669.47 debt.</p>
@@ -447,7 +446,6 @@
                         <li><strong>Release from Debt:</strong> Adam must be formally and completely released from his obligation on the mortgage. This can only be achieved through one of two methods: Jane assuming the loan with the lender's approval or Jane obtaining a new mortgage to pay off the old one.</li>
                     </ol>
                     <p>Separating these two goals is essential for navigating the process correctly and protecting both parties' interests.</p>
-
                     <h3 id="s1-2" style="color: #004080;">1.2 Calculating the Equity: The Core of the Buyout</h3>
                     <p>The financial heart of the buyout is the calculation of the property's equity, which determines the payment Adam will receive. A fair and transparent calculation is vital for an amicable agreement.</p>
                     <p>The process involves the following steps:</p>
@@ -456,43 +454,10 @@
                         <li><strong>Calculate Total Gross Equity:</strong> The formula for total gross equity is:<br><em>Fair Market Value - Remaining Mortgage Balance = Total Gross Equity</em></li>
                         <li><strong>Determine Adam's Buyout Amount:</strong> Based on the history of splitting payments 50/50, it is assumed that the total gross equity will be divided equally. Adam's buyout amount is 50% of the calculated total gross equity.</li>
                     </ol>
-                    <p>The table below illustrates potential buyout scenarios based on different appraised values.</p>
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>Appraised Fair Market Value (FMV)</th>
-                                <th>Current Mortgage Balance</th>
-                                <th>Total Gross Equity</th>
-                                <th>Adam's 50% Equity Share (Buyout Amount)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>$290,000</td>
-                                <td>$225,669.47</td>
-                                <td>$64,330.53</td>
-                                <td>$32,165.27</td>
-                            </tr>
-                            <tr>
-                                <td>$300,000</td>
-                                <td>$225,669.47</td>
-                                <td>$74,330.53</td>
-                                <td>$37,165.27</td>
-                            </tr>
-                            <tr>
-                                <td>$310,000</td>
-                                <td>$225,669.47</td>
-                                <td>$84,330.53</td>
-                                <td>$42,165.27</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
                     <h2 id="s2" style="color: #0056b3;">Section 2: Pathway One - FHA Loan Assumption</h2>
                     <h4 id="s2-1" style="color: #004080;">2.1 The Mechanics of an FHA Loan Assumption with PennyMac</h4>
                     <p>All FHA-insured mortgages are assumable, provided the lender approves the new borrower. This is a significant advantage because, unlike most conventional loans, FHA loans do not contain a "due-on-sale" clause that would require the loan to be paid off upon transfer. The primary benefit of an assumption is that the original loan's terms—including the principal balance, repayment schedule, and, most importantly, the interest rate—remain unchanged. Given that the loan was originated in May 2021, a period of historically low interest rates, preserving this rate could save Jane tens of thousands of dollars over the life of the loan compared to current market rates.</p>
                     <p>To begin, Adam and Jane must contact PennyMac's loan servicing department and specifically ask for the <strong>assumption processing unit</strong> to request an assumption application package.</p>
-
                     <h4 id="s2-2" style="color: #004080;">2.2 The Underwriting Gauntlet: What Jane Can Expect</h4>
                     <p>Because the loan was originated on May 19, 2021, which is after the critical date of December 15, 1989, Jane is required to undergo a full creditworthiness review by PennyMac's underwriters. This process is nearly identical to applying for a new FHA loan. The underwriters will assess her application based on the "Three C's" of underwriting:</p>
                     <ul style="list-style-type: disc; padding-left: 30px;">
@@ -501,18 +466,14 @@
                         <li><strong>Collateral:</strong> The property itself serves as collateral. PennyMac may or may not require a new appraisal for the assumption itself, but as established, one is recommended for the equity calculation.</li>
                     </ul>
                     <p>To facilitate this review, Jane should be prepared to provide extensive financial documentation, including recent pay stubs, W-2 forms for the past two years, federal tax returns, and complete bank statements.</p>
-
                     <h4 id="s2-3" style="color: #004080;">2.3 The Critical Milestone: Adam's Release of Liability</h4>
                     <p>For Adam, the single most important outcome of the assumption process is obtaining a complete release from the mortgage debt. This is not an automatic consequence of the assumption. Upon approving Jane as a creditworthy borrower, PennyMac is required by HUD regulations to prepare and execute <strong>Form HUD-92210.1, Approval of Purchaser and Release of Seller</strong>. This document legally severs Adam's connection to the mortgage obligation.</p>
                     <p>Without this signed release, Adam remains contingently liable for the debt. If Jane were to default in the future, PennyMac could legally pursue Adam for the outstanding balance—a position of maximum risk where he would have no ownership of the property but full liability for the debt. To prevent this catastrophic outcome, the sequence of events must be strictly followed: the transfer of title via the Quitclaim Deed should <em>only</em> occur <em>after</em> Adam has received the fully executed Release of Liability from PennyMac.</p>
-
                     <h4 id="s2-4" style="color: #004080;">2.4 Associated Costs and Timelines</h4>
                     <p>While an assumption is generally less expensive than a refinance, it is not without cost. Closing costs can range from 2% to 6% of the home's value and may include an assumption processing fee from PennyMac (FHA rules may cap this fee), title search and insurance fees, and government recording fees.</p>
                     <p>The timeline for an assumption can be lengthy. Borrowers and agents report that the process with large servicers can take from 60 to 90 days, and sometimes longer. This is not a quick transaction and will require patience and persistent follow-up with PennyMac's assumption department to ensure progress.</p>
-                    
                     <h2 id="s3" style="color: #0056b3;">Section 3: Pathway Two - Refinancing the Property</h2>
                     <p>The alternative to an assumption is for Jane to obtain a new mortgage in her name alone. This new loan would pay off Adam's existing PennyMac mortgage and, depending on the loan type, could also provide the funds to buy out his equity.</p>
-                    
                     <h2 id="s4" style="color: #0056b3;">Section 4: Structuring the Equity Payout</h2>
                     <h3 id="s4-1" style="color: #004080;">4.1 Drafting a Legally Sound Promissory Note in Louisiana</h3>
                     <p>To formalize the debt Jane owes Adam for his equity, they must execute a <strong>Promissory Note</strong>. This is not an informal IOU but a legally binding contract enforceable in court. To be valid in Louisiana, the note must be in writing and contain several key components:</p>
@@ -526,7 +487,6 @@
                     </ul>
                     <h3 id="s4-2" style="color: #004080;">4.2 Setting a Fair and Compliant Interest Rate</h3>
                     <p>Adam and Jane cannot simply agree to a 0% interest rate on the promissory note. The IRS has "Below-Market Interest Rules." If the interest rate is too low or zero, the IRS can "impute" interest, treating the transaction as if Adam received taxable interest income (at a rate set by the IRS) and simultaneously made a taxable gift to Jane for the same amount. To avoid this, the loan must carry an interest rate that is at least equal to the <strong>Applicable Federal Rate (AFR)</strong>, which the IRS publishes monthly. For June 2025, the annual long-term AFR is <strong>4.77%</strong>.</p>
-                    
                     <h2 id="s5" style="color: #0056b3;">Section 5: The Legal Execution</h2>
                     <h3 id="s5-1" style="color: #004080;">5.1 The Buyout Agreement</h3>
                     <p>While Adam and Jane are amicable, it is imperative to create a simple, written <strong>Buyout Agreement</strong>. This document should be signed by both parties and memorialize the key terms of the entire transaction. It should reference the agreed-upon Fair Market Value, the equity calculation, the plan for Jane to assume the FHA loan, and the terms of the equity payout via the Promissory Note.</p>
@@ -535,19 +495,54 @@
                     <h3 id="s5-3" style="color: #004080;">5.3 Recording the Documents</h3>
                     <p>The original, notarized Quitclaim Deed must be filed for recording at the <strong>Orleans Parish Clerk of Court, Land Records Division</strong>, located at 1340 Poydras Street, 4th Floor, New Orleans, LA 70112.</p>
                 </div>
-            </body>
-            </html>`;
-            
-            const blob = new Blob([reportContent], { type: 'text/html' });
-            reportUrl = URL.createObjectURL(blob);
-            
-            document.getElementById('fullReportLink').href = reportUrl;
+            `;
+
+            reportContentEl.innerHTML = reportStyles + reportHtmlContent;
+
+            const openModal = (anchor) => {
+                reportModal.classList.remove('hidden');
+                reportModal.classList.add('flex');
+                if(anchor) {
+                    const targetElement = reportContentEl.querySelector(anchor);
+                    if(targetElement) {
+                         reportContentEl.scrollTop = targetElement.offsetTop - 20;
+                    }
+                } else {
+                    reportContentEl.scrollTop = 0;
+                }
+            };
             
             document.querySelectorAll('.report-link').forEach(link => {
-                const anchor = link.getAttribute('data-report-anchor');
-                link.href = reportUrl + anchor;
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const anchor = e.currentTarget.getAttribute('data-report-anchor');
+                    openModal(anchor);
+                });
             });
+
+            document.getElementById('fullReportLink').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(null);
+            });
+
+            const closeModal = () => {
+                reportModal.classList.add('hidden');
+                reportModal.classList.remove('flex');
+            };
+
+            closeReportModalBtn.addEventListener('click', closeModal);
+            reportModal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
         }
+
+        homeValueSlider.addEventListener('input', calculateAndDisplay);
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeCharts();
+            calculateAndDisplay();
+            setupAccordion();
+            setupInfoModal();
+            setupReportModal();
+        });
 
     </script>
 
